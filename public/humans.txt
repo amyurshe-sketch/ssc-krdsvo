@@ -1,0 +1,6 @@
+/* TEAM */
+Responsible: Денис Давыдов — Центр социальной реабилитации
+Development & design: E-omlet (https://e-omlet.vercel.app/)
+
+/* THANKS */
+Мы рядом, чтобы поддержать участников СВО и их семьи.

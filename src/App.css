@@ -1,0 +1,266 @@
+.page {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #101010;
+}
+
+.header {
+  background-color: #000000;
+  padding: 18px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #f5f5f5;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 0.6;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.7), rgba(25, 25, 25, 0.45)),
+    url('/usefull/hero.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.6));
+  z-index: 0;
+}
+
+.hero__content {
+  position: relative;
+  max-width: 900px;
+  z-index: 1;
+}
+
+.hero__tagline {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mission {
+  min-height: 100vh;
+  padding: 120px 24px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission p {
+  max-width: 840px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  text-align: center;
+  color: #2a2a2a;
+}
+
+.leader {
+  padding: 120px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.leader__text h2 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.leader__role {
+  margin: 0;
+  color: #7a7a7a;
+}
+
+.leader__divider {
+  display: inline-block;
+  width: 60px;
+  height: 3px;
+  background-color: #101010;
+  margin: 24px 0;
+}
+
+.leader__text p {
+  margin-top: 0;
+  color: #232323;
+}
+
+.leader__photo img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.15);
+  margin-top: -40px;
+}
+
+.donation {
+  padding: 120px 24px 140px;
+  background-color: #ececec;
+  text-align: center;
+}
+
+.donation__title {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #555555;
+}
+
+.donation h3 {
+  font-size: 2rem;
+  margin: 0 0 32px;
+}
+
+.donation__qr {
+  width: 240px;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.donation__note {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 32px;
+}
+
+.donation__note p {
+  margin: 6px 0;
+}
+
+.donation__cta {
+  display: inline-block;
+  color: #101010;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.donation__cta:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 16px;
+  }
+
+  .nav {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .mission,
+  .leader,
+  .donation {
+    padding: 80px 20px;
+  }
+
+  .leader {
+    gap: 40px;
+  }
+
+  .leader__photo img {
+    margin-top: 0;
+  }
+
+  .donation__qr {
+    width: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    position: static;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero__tagline {
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+  }
+
+  .mission,
+  .leader,
+  .donation {
+    padding: 64px 16px;
+  }
+
+  .leader {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .leader__divider {
+    margin: 16px auto;
+  }
+
+  .leader__photo img {
+    margin-top: 0;
+  }
+
+  .donation__note p {
+    margin: 10px 0;
+  }
+}
