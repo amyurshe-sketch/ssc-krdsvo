@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ssc-krdsvo.vercel.app/sitemap.xml
+Sitemap: https://csp-krdsvo.vercel.app/sitemap.xml
